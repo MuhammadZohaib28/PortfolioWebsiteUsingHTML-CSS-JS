@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+
+}
+
+/* Creating CSS Variables */
+
+:root{
+    --heading:rgb(0 10 45);
+    --paragraph: rgb(0, 0, 0);
+    --paragraph-tint: #e4e4e4;
+    --white: rgb(240, 233, 233);
+    --helper: #8490ff;
+    --helper-tint: #f3f4ff;
+    --bg: rgb(253, 252, 252);
+    --bgheader: linear-gradient(to right,  rgba(93, 59, 229, 0.179), rgba(246, 255, 0, 0.081));
+    --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+    --gradientSupport: -webkit-linear-gradient(
+        0deg,
+        rgb(132 144 255)0%,
+        rgba(50, 50, 50, 0.595) 100%
+
+    );
+    --shadow: 0px 0px 20px 0px rgba(132, 144, 255, 0.21);
+    
+}
+
+html{
+    font-size: 62.5%;
+    behavior: scroll;
+
+}
+
+h1,h2,h3.h4{
+    font-family:"Poppins", sans-serif;
+}
+
+h1{
+    color: var(--heading);
+    font-size: 60px;
+    font-weight: 600;
+
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+
+
+}
+
+p{
+    color: var(--paragraph);
+    line-height: 1.6;
+    font-size: 1.7rem;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+}
+
+
+/* =======================================================================
+
+
+                    HEADER SECTION STARTS FROM HERE 
+
+============================================================================
+*/
+
+.header{
+    padding: 0 5.8rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.header .logo{
+    height: 10rem;
+}
+
+.navbar-lists{
+    display: flex;
+    gap: 20px;
+    background:linear-gradient(to right,  rgba(93, 59, 229, 0.282), rgba(246, 255, 0, 0.282));
+    padding: 0.5rem;
+         
+}
+
+nav{
+    background-color: inherit;
+    /* position: relative; */
+    top: 0;
+}
+nav.scrolled {
+    background:linear-gradient(to right,  rgba(93, 59, 229, 0.982), rgba(246, 255, 0, 0.982));
+    /* position: fixed; */
+    top: 0;
+}
+
+nav.scrolled {
+    background:linear-gradient(to right,  rgba(93, 59, 229, 0.982), rgba(246, 255, 0, 0.982));
+    /* position: fixed; */
+    top: 0;
+}
+
+
+.navbar-link:link,
+.navbar-link:visited{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2.0rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--paragraph);
+    font-family: "Poppins" ,sans-serif;
+    transition: all 0.3s linear;
+    
+}
+.navbar-link:hover,
+.navbar-link:active{
+    color: var(--helper);
+}
+
+.header{
+    background: var(--bgheader);
+}
+
+/* =======================================================================
+
+
+                    REUSABLE CODE STARTS FROM HERE 
+
+============================================================================
+*/
+
+.section{
+    padding: 7rem 0;
+    box-shadow: var(--shadow);
+}
+
+.grid{
+    display: grid;
+    gap: 9rem;
+}
+
+.grid-two-column{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-column{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-column{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.btn{
+    background: var(--gradientSupport);
+    padding: 0.5rem;
+    border:none;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    max-width: 20rem;
+    font-size: 33px;
+    font-weight: 500;
+    color: var(--helper-tint);
+    cursor: pointer;
+    margin-top: 2rem;
+    
+}
+
+.btn:hover, .btn:active{
+    box-shadow: var(--shadow);
+}
+
+.btnDownloadCv{
+    background: var(--gradientSupport);
+    padding: 1rem 2rem 0.5rem 2rem; 
+    /* margin-top: 3rem; */
+    border:none;
+    display:inline-block;
+    text-transform: uppercase;
+    max-width: 120rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--helper-tint);
+    cursor: pointer;
+    
+}
+
+.btnDownloadCv:hover, .btnDownloadCv:active{
+    box-shadow: var(--shadow);
+}
+
+
+/* =======================================================================
+
+
+                    HERO SECTION STARTS FROM HERE 
+
+============================================================================
+*/
+
+.marquee-header{
+    border: 1px solid rgb(238, 244, 246);
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    background:linear-gradient(to right, rgba(246, 255, 0, 0.081), rgba(93, 59, 229, 0.078));
+    box-shadow: 0rem 0.18rem 0.2rem rgba(0, 0, 0, 0.389);
+    margin-top: 10.5rem;
+    position: relative;
+}
+
+ .section-hero{
+    background-color: var(--bg);
+ }
+
+ .section-hero-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+
+ }
+
+ .hero-top-data{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    color: var(--helper);
+ }
+
+ .hero-heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 5.4rem;
+    /* margin-top: 3rem; */
+
+ }
+
+
+
+ .hero-paragraph{
+    margin-top: 1.1rem;
+    font-size: 1.9rem;
+    max-width: 60rem;
+    /* margin-bottom: 3rem; */
+
+
+ }
+
+ .section-hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100%; */
+    
+    
+ }
+
+ .hero-img{
+    max-width: 68%;
+    box-shadow: var(--shadow);
+    background:linear-gradient(to right,  rgba(93, 59, 229, 0.182), rgba(246, 255, 0, 0.182));
+    /* border: 1px solid red; */
+    border-radius: 62% 38% 67% 33% / 36% 60% 40% 64%;
+    border: 1px solid #000000;
+    
+ }
+
+
+ /* =======================================================================
+
+
+ ABOUT SECTION STARTS FROM HERE 
+
+============================================================================ */
+.bio-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.bio-img{
+    max-width: 70%;
+    height: 70rem;
+    margin-top: 15rem;
+}
+
+.bio-image img{
+width: 100%;
+box-shadow: -2rem 2rem 0rem 0rem  var(--helper);
+display: inline-block;
+}
+
+.common-heading{
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    position: relative;
+
+}
+
+.common-heading::before{
+    content: "";
+    position: absolute;
+    top: 110%;
+    left: 0rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background: var(--helper);
+}
+
+.common-heading::after{
+    content: "";
+    position: absolute;
+    top: 122%;
+    left: 2rem;
+    min-width: 26.5rem;
+    height: 0.4rem;
+    background: var(--helper);
+     
+
+}
+
+.bio-data-stats{
+    display: flex;
+    padding: 2rem 0rem 6rem 0rem;
+    flex-direction: column;
+    gap: 3rem;
+    border-radius: 2rem;
+    background: linear-gradient(to right,  rgba(93, 59, 229, 0.059), rgba(246, 255, 0, 0.051));   
+    width: 90%;
+    margin-left: 1.7rem;
+}
+
+
+.bio-progress-bar{
+    width: 100%;
+    height: .9rem;
+    background: var(--white);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadow);
+    margin-left: 2rem;
+}
+
+.bio-progress-bar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: inherit;
+    background: rgb(7, 150, 7);
+    border-radius: 20rem;
+    
+}
+
+
+.bio-progress-2::before{
+    width: 90%;
+    background: rgb(11, 129, 255);
+
+}
+
+.bio-progress-3::before{
+    width: 86%;
+    background: rgb(255, 166, 0);
+
+}
+
+.bio-progress-4::before{
+    width: 100%;
+    background: rgb(255, 98, 0);
+
+}
+
+.bio-progress-bar span{
+    position: absolute;
+    top: 19px;
+    width: 4rem;
+    height: 2rem;
+    background: green;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border-radius: 7rem; 
+    
+}
+
+.bio-progress-2 span{
+    background:rgb(11, 129, 255);
+    
+}
+
+.bio-progress-3 span{
+    background:rgb(255, 166, 0);
+}
+
+.bio-progress-4 span{
+    background:rgb(255, 98, 0);
+}
+
+.bio-progress-bar span{
+    left: 76%;
+}
+
+.bio-progress-2 span{
+    left: 86%;
+}
+
+.bio-progress-3 span{
+    left: 86%;
+}
+
+.bio-progress-4 span{
+    left: 96%;
+}
+
+
+
+.bio-stats h2{
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.bio-heading{
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 2.8rem;
+    text-decoration: none;
+    /* box-shadow: 0 -3px #fff236 inset; */
+    width: 70%; 
+    border: 2px solid #fff236;
+    padding: 2px;
+    border: 1px solid rgb(255, 255, 255);
+    background: linear-gradient(to right,  rgba(210, 100, 100, 0.193), rgba(228, 174, 64, 0.121)); 
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+ }
+
+.bio-lists{
+    color: var(--paragraph);
+    line-height: 2.9;
+    font-size: 1.9rem;
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.bio-border{
+    /* border: 1px solid red; */
+    border-radius: 1.7rem;
+    
+}
+
+
+.eoqq{
+    width: 100%;
+    background: linear-gradient(to right,  rgba(93, 59, 229, 0.059), rgba(246, 255, 0, 0.051));   
+}
+
+.saa{
+    width: 45%;
+}
+
+
+
+ /* //TO create a Caret
+.bio-progress-bar span::after{
+    content: "";
+    position: absolute;
+    width: 6%;
+    height: 0rem;
+    border: 0.9rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: greenyellow;
+    top: -1.8rem;
+}  */
